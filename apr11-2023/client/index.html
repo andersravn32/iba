@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: monospace;
+        }
+
+        .task {
+            min-height: 50vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .task-inner {
+            border-radius: 16px;
+            border: 2px solid mediumaquamarine;
+            padding: 16px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        #countrylist {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #create-form {
+            display:flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        #create-form .inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="task">
+        <div class="task-inner">
+            <h2>Opgave 1</h2>
+            <ul id="countrylist">
+
+            </ul>
+        </div>
+    </section>
+
+    <section class="task">
+        <div class="task-inner">
+            <h2>Opgave 2</h2>
+            <form id="create-form">
+                <div class="inputs">
+                    <input type="text" placeholder="Indtast navn">
+                    <input type="text" placeholder="Indtast countrycode">
+                    <input type="text" placeholder="Indtast distrikt">
+                    <input type="number" placeholder="Indtast befolkningstal">
+                </div>
+                <button>Tilføj</button>
+            </form>
+            <p id="create-response"></p>
+        </div>
+    </section>
+
+    <script defer src="./app.js"></script>
+</body>
+
+</html>
