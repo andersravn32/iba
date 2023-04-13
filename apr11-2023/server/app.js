@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const morgan = require("morgan");
+const cors = require("cors");
 const helmet = require("helmet");
 const database = require("./utilities/database");
 
@@ -12,7 +13,7 @@ const init = async () => {
 
   app.use(morgan("dev"));
   app.use(helmet());
-
+  app.use(cors({ origin: "*" }));
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
 
